@@ -6,6 +6,7 @@
   "module": "index.js",
   "author": "Mark S. Everitt",
   "license": "MIT",
+  "repository": "github:qubyte/mixomatic",
   "files": [
     "index.umd.js",
     "index.js"
