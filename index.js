@@ -1,15 +1,19 @@
-export default class Mixin {
-  constructor(propertyDescriptors) {
-    this.propertyDescriptors = propertyDescriptors;
-    this.mixed = new WeakSet();
+export default function createMixin(propertyDescriptors) {
+  const mixed = new Set();
+
+  function mixin(obj) {
+    Object.defineProperties(obj, propertyDescriptors);
+    mixed.add(obj);
   }
 
-  mix(obj) {
-    Object.defineProperties(obj, this.propertyDescriptors);
-    this.mixed.add(obj);
-  }
+  Object.defineProperty(mixin, Symbol.hasInstance, {
+    value(obj) {
+      return mixed.has(obj);
+    },
+    configurable: false,
+    enumerable: false,
+    writable: false
+  });
 
-  [Symbol.hasInstance](obj) {
-    return this.mixed.has(obj);
-  }
+  return mixin;
 }

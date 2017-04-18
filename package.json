@@ -12,9 +12,9 @@
     "index.js"
   ],
   "scripts": {
-    "prepublish": "rollup -f umd -n Mixin index.js -o index.umd.js",
+    "prepublish": "rollup -f umd -n mixomatic index.js -o index.umd.js",
     "postpublish": "rimraf index.umd.js",
-    "test": "eslint . && rollup -f umd -n Mixin index.js -o index.umd.js && mocha && rimraf index.umd.js"
+    "test": "eslint . && rollup -f umd -n mixomatic index.js -o index.umd.js && mocha && rimraf index.umd.js"
   },
   "devDependencies": {
     "eslint": "^3.19.0",

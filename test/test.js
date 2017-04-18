@@ -1,19 +1,14 @@
 'use strict';
 
 const assert = require('assert');
-const Mixin = require('..');
+const createMixin = require('..');
 
 describe('Mixin', () => {
   it('is a function', () => {
-    assert.ok(Mixin instanceof Function);
+    assert.ok(createMixin instanceof Function);
   });
 
-  it('must be constructed with new', () => {
-    assert.throws(() => Mixin()); // eslint-disable-line new-cap
-    assert.doesNotThrow(() => new Mixin());
-  });
-
-  describe('instances', () => {
+  describe('mixins', () => {
     let descriptors;
     let mixin;
 
@@ -35,13 +30,13 @@ describe('Mixin', () => {
         }
       };
 
-      mixin = new Mixin(descriptors);
+      mixin = createMixin(descriptors);
     });
 
     it('Appends properties to the object according to descriptors', () => {
       const obj = {};
 
-      mixin.mix(obj);
+      mixin(obj);
 
       assert.deepStrictEqual(Object.getOwnPropertyDescriptors(obj), descriptors);
     });
@@ -49,7 +44,7 @@ describe('Mixin', () => {
     it('does not drop existing properties', () => {
       const obj = { a: 1, b: 2, c: 3 };
 
-      mixin.mix(obj);
+      mixin(obj);
 
       const allDescriptors = Object.assign({}, descriptors, {
         a: {
@@ -78,7 +73,7 @@ describe('Mixin', () => {
     it('considers mixed objects to be instances of itself', () => {
       const obj = {};
 
-      mixin.mix(obj);
+      mixin(obj);
 
       assert.strictEqual(obj instanceof mixin, true);
     });

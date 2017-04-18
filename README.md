@@ -20,14 +20,15 @@ yarn add mixomatic
 
 Make a new mixin which appends [`propertyDescriptors`][1] to an object.
 ```javascript
-const myMixin = new Mixin(propertyDescriptors)
+const mixomatic = require('mixomatic');
+const myMixin = mixomatic(propertyDescriptors)
 ```
 
 Mix onto an object.
 ```javascript
 const obj = {};
 
-myMixin.mix(obj);
+myMixin(obj);
 ```
 
 Check if an object has been modified by a given mixin:
