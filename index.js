@@ -1,5 +1,5 @@
 export default function createMixin(propertyDescriptors) {
-  const mixed = new Set();
+  const mixed = new WeakSet();
 
   function mixin(obj) {
     Object.defineProperties(obj, propertyDescriptors);
