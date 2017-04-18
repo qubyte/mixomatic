@@ -1,6 +1,6 @@
 {
   "name": "mixomatic",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Create mixins which work with instanceof (friendly for unit tests).",
   "main": "index.umd.js",
   "module": "index.js",
