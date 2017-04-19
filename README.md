@@ -34,7 +34,20 @@ myMixin(obj);
 Check if an object has been modified by a given mixin:
 
 ```javascript
-obj instanceof myMixin;
+obj instanceof myMixin; // true
+```
+
+Also works with classes!
+
+```javascript
+class MyClass {}
+
+myMixin(MyClass.prototype);
+
+const obj = new MyClass();
+
+obj instanceof MyClass; // true
+obj instanceof myMixin; // true
 ```
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
