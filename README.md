@@ -68,8 +68,8 @@ the position of its host object.
 const movable = mixomatic({
   move: {
     value(dt) {
-      this.position.x += dt + this.velocity.x;
-      this.position.y += dt + this.velocity.y;
+      this.position.x += dt * this.velocity.x;
+      this.position.y += dt * this.velocity.y;
     }
     configurable: true,
     enumerable: false,
