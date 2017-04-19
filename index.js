@@ -8,7 +8,13 @@ export default function createMixin(propertyDescriptors) {
 
   Object.defineProperty(mixin, Symbol.hasInstance, {
     value(obj) {
-      return mixed.has(obj);
+      for (let o = obj; o; o = Object.getPrototypeOf(o)) {
+        if (mixed.has(o)) {
+          return true;
+        }
+      }
+
+      return false;
     },
     configurable: false,
     enumerable: false,

@@ -83,5 +83,13 @@ describe('Mixin', () => {
 
       assert.strictEqual(obj instanceof mixin, false);
     });
+
+    it('works with classes via prototypes', () => {
+      class MyClass {}
+
+      mixin(MyClass.prototype);
+
+      assert.strictEqual(new MyClass() instanceof mixin, true);
+    });
   });
 });
