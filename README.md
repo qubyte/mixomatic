@@ -70,7 +70,7 @@ const movable = mixomatic({
     value(dt) {
       this.position.x += dt * this.velocity.x;
       this.position.y += dt * this.velocity.y;
-    }
+    },
     configurable: true,
     enumerable: false,
     writable: true
@@ -83,8 +83,8 @@ Since there'll only be one ship, you define it directly as an object and apply
 
 ```javascript
 const ship = {
-  position: { x: 0, y: 0 };
-  velocity: { x: 0, y: 0 };
+  position: { x: 0, y: 0 },
+  velocity: { x: 0, y: 0 }
 };
 
 movable(ship);
