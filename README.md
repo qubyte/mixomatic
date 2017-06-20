@@ -21,7 +21,7 @@ yarn add mixomatic
 Make a new mixin which appends [`propertyDescriptors`][1] to an object.
 ```javascript
 const mixomatic = require('mixomatic');
-const myMixin = mixomatic(propertyDescriptors)
+const myMixin = mixomatic(propertyDescriptors);
 ```
 
 Mix onto an object.
