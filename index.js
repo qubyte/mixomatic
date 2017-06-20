@@ -6,20 +6,18 @@ export default function createMixin(propertyDescriptors) {
     mixed.add(obj);
   }
 
-  Object.defineProperty(mixin, Symbol.hasInstance, {
-    value(obj) {
-      for (let o = obj; o; o = Object.getPrototypeOf(o)) {
-        if (mixed.has(o)) {
-          return true;
-        }
+  function checkInstance(obj) {
+    for (let o = obj; o; o = Object.getPrototypeOf(o)) {
+      if (mixed.has(o)) {
+        return true;
       }
+    }
+  }
 
-      return false;
-    },
+  return Object.defineProperty(mixin, Symbol.hasInstance, {
+    value: checkInstance,
     configurable: false,
     enumerable: false,
     writable: false
   });
-
-  return mixin;
 }
