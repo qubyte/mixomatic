@@ -14,13 +14,14 @@
   "scripts": {
     "prepublish": "rollup -f umd -n mixomatic index.js -o index.umd.js",
     "postpublish": "rimraf index.umd.js",
-    "test": "eslint . && rollup -f umd -n mixomatic index.js -o index.umd.js && mocha && rimraf index.umd.js"
+    "test": "rollup -f umd -n mixomatic index.js -o index.umd.js && mocha && rimraf index.umd.js",
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "eslint": "^4.6.1",
+    "eslint": "^4.8.0",
     "eslint-config-qubyte": "^1.1.0",
     "mocha": "^4.0.0",
-    "rimraf": "^2.6.1",
+    "rimraf": "^2.6.2",
     "rollup": "^0.50.0"
   }
 }
