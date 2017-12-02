@@ -18,6 +18,15 @@ With `yarn`:
 yarn add mixomatic
 ```
 
+Or alternatively, you can use it directly in a page via [unpkg][0]:
+```html
+<!-- plain script -->
+<script src="https://unpkg.com/mixomatic"></script>
+
+<!-- module -->
+<script type="module" src="https://unpkg.com/mixomatic/index.js"></script>
+```
+
 ## Usage
 
 Make a new mixin which appends [`propertyDescriptors`][1] to an object.
@@ -115,4 +124,5 @@ This is useful because mixins can be tested in isolation, and you can avoid
 duplication of tests for mixed properties by using an `instanceof` check in the
 test suites of host objects like `ship` and `Asteroid`.
 
+[0]: https://unpkg.com/
 [1]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
