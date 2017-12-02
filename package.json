@@ -12,7 +12,7 @@
     "index.js"
   ],
   "scripts": {
-    "prepublish": "rollup -f umd -n mixomatic index.js -o index.umd.js",
+    "prepublishOnly": "rollup -f umd -n mixomatic index.js -o index.umd.js",
     "postpublish": "rimraf index.umd.js",
     "test": "rollup -f umd -n mixomatic index.js -o index.umd.js && mocha && rimraf index.umd.js",
     "lint": "eslint ."
