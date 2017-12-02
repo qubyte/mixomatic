@@ -24,7 +24,7 @@ Or alternatively, you can use it directly in a page via [unpkg][0]:
 <script src="https://unpkg.com/mixomatic"></script>
 
 <!-- module -->
-<script type="module" src="https://unpkg.com/mixomatic/index.js"></script>
+<script type="module" src="https://unpkg.com/mixomatic?module"></script>
 ```
 
 ## Usage
