@@ -18,13 +18,15 @@ With `yarn`:
 yarn add mixomatic
 ```
 
-Or alternatively, you can use it directly in a page via [unpkg][0]:
+Or alternatively, you can use it directly in a page via [unpkg][0] as a script
+(which will append `mixomatic` to the global scope):
 ```html
-<!-- plain script -->
 <script src="https://unpkg.com/mixomatic"></script>
+```
 
-<!-- module -->
-<script type="module" src="https://unpkg.com/mixomatic?module"></script>
+or as a module:
+```javascript
+import mixomatic from 'https://unpkg.com/mixomatic?module';
 ```
 
 ## Usage
