@@ -11,6 +11,11 @@
     "index.umd.js",
     "index.js"
   ],
+  "keywords": [
+    "multiple inheritance",
+    "mixins",
+    "instanceof"
+  ],
   "scripts": {
     "prepublishOnly": "rollup -f umd -n mixomatic index.js -o index.umd.js",
     "postpublish": "rimraf index.umd.js",
