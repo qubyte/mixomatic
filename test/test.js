@@ -33,6 +33,20 @@ describe('Mixin', () => {
       mixin = createMixin(descriptors);
     });
 
+    it('makes the Symbol.hasInstance property of the mixin not configurable, not enumerable, and not writable', () => {
+      const { configurable, enumerable, writable } = Object.getOwnPropertyDescriptor(mixin, Symbol.hasInstance);
+
+      assert.strictEqual(configurable, false);
+      assert.strictEqual(enumerable, false);
+      assert.strictEqual(writable, false);
+    });
+
+    it('returns the object passed to it', () => {
+      const obj = {};
+
+      assert.equal(obj, mixin(obj));
+    });
+
     it('Appends properties to the object according to descriptors', () => {
       const obj = {};
 
@@ -46,7 +60,8 @@ describe('Mixin', () => {
 
       mixin(obj);
 
-      const allDescriptors = Object.assign({}, descriptors, {
+      const allDescriptors = {
+        ...descriptors,
         a: {
           value: 1,
           configurable: true,
@@ -65,7 +80,7 @@ describe('Mixin', () => {
           writable: true,
           enumerable: true
         }
-      });
+      };
 
       assert.deepStrictEqual(Object.getOwnPropertyDescriptors(obj), allDescriptors);
     });

@@ -4,6 +4,7 @@ export default function createMixin(propertyDescriptors) {
   function mixin(obj) {
     Object.defineProperties(obj, propertyDescriptors);
     mixed.add(obj);
+    return obj;
   }
 
   function checkInstance(obj) {
@@ -14,10 +15,7 @@ export default function createMixin(propertyDescriptors) {
     }
   }
 
-  return Object.defineProperty(mixin, Symbol.hasInstance, {
-    value: checkInstance,
-    configurable: false,
-    enumerable: false,
-    writable: false
-  });
+  Object.defineProperty(mixin, Symbol.hasInstance, { value: checkInstance });
+
+  return mixin;
 }
