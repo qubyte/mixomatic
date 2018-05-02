@@ -63,6 +63,18 @@ obj instanceof MyClass; // true
 obj instanceof myMixin; // true
 ```
 
+And inheritance!
+
+```javascript
+class MyChildClass extends MyClass {}
+
+const obj = new MyChildClass();
+
+obj instanceof MyChildClass; // true
+obj instanceof MyClass;      // true
+obj instanceof myMixin;      // true
+```
+
 ## Example
 
 You're making a game with a little ship which shoots space-bound rocks before
