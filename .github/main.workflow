@@ -1,4 +1,4 @@
-workflow "New workflow" {
+workflow "CI" {
   on = "push"
   resolves = ["npm test", "npm run lint"]
 }
