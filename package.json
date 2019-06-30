@@ -23,7 +23,7 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.0",
     "eslint-config-qubyte": "^2.0.0",
     "mocha": "^6.1.4",
     "rimraf": "^2.6.3",
