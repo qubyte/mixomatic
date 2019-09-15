@@ -23,11 +23,11 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
+    "eslint": "^6.4.0",
     "eslint-config-qubyte": "^3.0.0",
     "mocha": "^6.2.0",
     "rimraf": "^3.0.0",
-    "rollup": "^1.19.4"
+    "rollup": "^1.21.3"
   },
   "dependencies": {}
 }
