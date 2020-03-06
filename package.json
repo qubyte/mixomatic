@@ -27,7 +27,7 @@
     "eslint-config-qubyte": "^3.0.0",
     "mocha": "^6.2.0",
     "rimraf": "^3.0.0",
-    "rollup": "^1.21.3"
+    "rollup": "^2.0.0"
   },
   "dependencies": {}
 }
