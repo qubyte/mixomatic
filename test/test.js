@@ -1,6 +1,6 @@
 'use strict';
 
-const assert = require('assert');
+const assert = require('assert').strict;
 const createMixin = require('..');
 
 describe('Mixin', () => {
@@ -36,9 +36,9 @@ describe('Mixin', () => {
     it('makes the Symbol.hasInstance property of the mixin not configurable, not enumerable, and not writable', () => {
       const { configurable, enumerable, writable } = Object.getOwnPropertyDescriptor(mixin, Symbol.hasInstance);
 
-      assert.strictEqual(configurable, false);
-      assert.strictEqual(enumerable, false);
-      assert.strictEqual(writable, false);
+      assert.equal(configurable, false);
+      assert.equal(enumerable, false);
+      assert.equal(writable, false);
     });
 
     it('returns the object passed to it', () => {
@@ -52,7 +52,7 @@ describe('Mixin', () => {
 
       mixin(obj);
 
-      assert.deepStrictEqual(Object.getOwnPropertyDescriptors(obj), descriptors);
+      assert.deepEqual(Object.getOwnPropertyDescriptors(obj), descriptors);
     });
 
     it('does not drop existing properties', () => {
@@ -82,7 +82,7 @@ describe('Mixin', () => {
         }
       };
 
-      assert.deepStrictEqual(Object.getOwnPropertyDescriptors(obj), allDescriptors);
+      assert.deepEqual(Object.getOwnPropertyDescriptors(obj), allDescriptors);
     });
 
     it('considers mixed objects to be instances of itself', () => {
@@ -90,13 +90,13 @@ describe('Mixin', () => {
 
       mixin(obj);
 
-      assert.strictEqual(obj instanceof mixin, true);
+      assert.equal(obj instanceof mixin, true);
     });
 
     it('considers unmixed objects not to be instances of itself', () => {
       const obj = {};
 
-      assert.strictEqual(obj instanceof mixin, false);
+      assert.equal(obj instanceof mixin, false);
     });
 
     it('works with classes via prototypes', () => {
@@ -104,7 +104,7 @@ describe('Mixin', () => {
 
       mixin(MyClass.prototype);
 
-      assert.strictEqual(new MyClass() instanceof mixin, true);
+      assert.equal(new MyClass() instanceof mixin, true);
     });
   });
 });

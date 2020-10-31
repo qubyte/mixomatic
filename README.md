@@ -1,7 +1,5 @@
 # mixomatic
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/qubyte/mixomatic.svg)](https://greenkeeper.io/)
-
 Create mixins which work with `instanceof` (friendly for unit tests). Internally
 references are handled by a `WeakSet` instances so there's no need to manually
 keep records of which objects have been mixed onto and risk memory leaks.
