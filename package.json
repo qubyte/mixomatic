@@ -2,13 +2,13 @@
   "name": "mixomatic",
   "version": "3.2.4",
   "description": "Create mixins which work with instanceof (friendly for unit tests).",
-  "main": "index.umd.js",
-  "module": "index.js",
   "author": "Mark S. Everitt",
   "license": "MIT",
   "repository": "github:qubyte/mixomatic",
+  "main": "index.js",
+  "module": "index.js",
+  "type": "module",
   "files": [
-    "index.umd.js",
     "index.js"
   ],
   "keywords": [
@@ -17,17 +17,12 @@
     "instanceof"
   ],
   "scripts": {
-    "prepublishOnly": "rollup -f umd -n mixomatic index.js -o index.umd.js",
-    "postpublish": "rimraf index.umd.js",
-    "test": "rollup -f umd -n mixomatic index.js -o index.umd.js && mocha && rimraf index.umd.js",
+    "test": "mocha",
     "lint": "eslint ."
   },
   "devDependencies": {
     "eslint": "^7.12.1",
     "eslint-config-qubyte": "^3.0.0",
-    "mocha": "^8.2.0",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.32.1"
-  },
-  "dependencies": {}
+    "mocha": "^8.2.0"
+  }
 }

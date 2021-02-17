@@ -1,7 +1,5 @@
-'use strict';
-
-const assert = require('assert').strict;
-const createMixin = require('..');
+import { strict as assert } from 'assert';
+import createMixin from '../index.js';
 
 describe('Mixin', () => {
   it('is a function', () => {

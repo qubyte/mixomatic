@@ -1,7 +1,4 @@
 {
-  "parserOptions": {
-    "sourceType": "script"
-  },
   "env": {
     "mocha": true,
     "node": true

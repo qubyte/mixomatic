@@ -16,22 +16,18 @@ With `yarn`:
 yarn add mixomatic
 ```
 
-Or alternatively, you can use it directly in a page via [unpkg][0] as a script
-(which will append `mixomatic` to the global scope):
-```html
-<script src="https://unpkg.com/mixomatic"></script>
-```
-
-or as a module:
+Or alternatively, in a browser or deno you can use it directly in a page via
+[unpkg][0] as a module (not recommended for production use):
 ```javascript
-import mixomatic from 'https://unpkg.com/mixomatic?module';
+import mixomatic from 'https://unpkg.com/mixomatic';
 ```
 
 ## Usage
 
 Make a new mixin which appends [`propertyDescriptors`][1] to an object.
 ```javascript
-const mixomatic = require('mixomatic');
+import mixomatic from 'mixomatic';
+
 const myMixin = mixomatic(propertyDescriptors);
 ```
 
