@@ -1,5 +1,9 @@
 # History
 
+## v4.0.1
+
+Adds an export map.
+
 ## v4.0.0
 
 Drop support for UMD modules and Node 10. Use v3 if you still need that

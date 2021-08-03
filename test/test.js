@@ -1,5 +1,5 @@
 import { strict as assert } from 'assert';
-import createMixin from '../index.js';
+import createMixin from 'mixomatic';
 
 describe('Mixin', () => {
   it('is a function', () => {

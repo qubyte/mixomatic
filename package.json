@@ -8,6 +8,9 @@
   "main": "index.js",
   "module": "index.js",
   "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
   "files": [
     "index.js"
   ],
