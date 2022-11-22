@@ -1,4 +1,5 @@
-import { strict as assert } from 'assert';
+import { strict as assert } from 'node:assert';
+import { describe, it, beforeEach } from 'node:test';
 import createMixin from 'mixomatic';
 
 describe('Mixin', () => {
