@@ -11,24 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [12, 14, 16]
+        node: [16, 18]
     steps:
     - name: checkout
       uses: actions/checkout@main
     - name: use node ${{ matrix.node }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node }}
-    - run: npm ci
     - run: npm test
   lint:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
       uses: actions/checkout@main
-    - name: use node 14
-      uses: actions/setup-node@v2
+    - name: use node 18
+      uses: actions/setup-node@v3
       with:
-        node-version: 14.x
+        node-version: 18.x
     - run: npm ci
     - run: npm run lint

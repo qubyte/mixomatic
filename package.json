@@ -20,12 +20,11 @@
     "instanceof"
   ],
   "scripts": {
-    "test": "mocha",
+    "test": "node --test",
     "lint": "eslint ."
   },
   "devDependencies": {
-    "eslint": "^7.28.0",
-    "eslint-config-qubyte": "^4.1.0",
-    "mocha": "^9.0.0"
+    "eslint": "^8.28.0",
+    "eslint-config-qubyte": "^5.0.0"
   }
 }
