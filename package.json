@@ -1,6 +1,6 @@
 {
   "name": "mixomatic",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "description": "Create mixins which work with instanceof (friendly for unit tests).",
   "author": "Mark S. Everitt",
   "license": "MIT",
