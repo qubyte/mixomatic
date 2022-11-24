@@ -1,5 +1,9 @@
 # History
 
+## v5.0.0
+
+Drops support for Node 14.
+
 ## v4.0.1
 
 Adds an export map.
