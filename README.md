@@ -1,3 +1,5 @@
+This repository has been [moved to codeburg](https://codeberg.org/qubyte/mixomatic).
+
 # mixomatic
 
 Create mixins which work with `instanceof` (friendly for unit tests). Internally
